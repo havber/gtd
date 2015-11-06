@@ -2,14 +2,31 @@
 
 $primary-color: green;
 
+html, body {
+  height: 100%;
+}
+.app-container {
+  display: flex;
+  height: 100%;
+}
+
 h1 {
   color: $primary-color;
 }
 
+ul {
+  width: 100%;
+  padding: 0 40px;
+}
 li.task {
   list-style-type: none;
+  padding: 10px;
+  border-bottom: 1px solid #f0f0f0;
 
+  input[type="checkbox"]:checked + label {
+    text-decoration: line-through;
+  }
   label {
-    padding: 0 10px;
+    padding: 10px;
   }
 }

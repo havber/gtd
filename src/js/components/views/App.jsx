@@ -11,17 +11,14 @@ export default React.createClass({
   getDefaultProps() {
     return {
       tasks: []
-    }
+    };
   },
 
   render() {
     let {onAddTask, onClear, tasks} = this.props;
     return (
-      <div>
-        <h1>Learn Flux</h1>
-        <TaskList tasks={tasks} />
-        <button onClick={onAddTask}>Add New</button>
-        <button onClick={onClear}>Clear List</button>
+      <div className="app-container">
+        <TaskList />
       </div>
     );
   }

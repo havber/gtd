@@ -21,6 +21,9 @@ module.exports = {
       imagePath: '/images' // Used by the image-url helper
     }
   },
+  jshint: {
+    src: src + '/js/**/*'
+  },
   browserify: {
     settings: {
       transform: ['babelify', 'reactify']

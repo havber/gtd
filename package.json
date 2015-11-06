@@ -11,8 +11,11 @@
     "electron-prebuilt": "^0.33.3",
     "gulp": "^3.8.7",
     "gulp-connect": "^2.2.0",
+    "gulp-jshint": "^1.11.2",
     "gulp-sass": "^2.0.4",
     "gulp-util": "^3.0.6",
+    "jshint-jsx": "^0.4.1",
+    "jshint-stylish": "^2.0.1",
     "reactify": "^1.1.1",
     "require-dir": "^0.3.0",
     "vinyl-buffer": "^1.0.0",
@@ -22,7 +25,8 @@
   "scripts": {
     "dev": "gulp --type dev",
     "start": "gulp",
-    "build": "gulp build"
+    "build": "gulp build",
+    "eldev": "node_modules/.bin/electron ."
   },
   "jest": {
     "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",

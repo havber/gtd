@@ -1,5 +1,5 @@
 import React from 'react';
-import ActionCreator from '../actions/TodoActionCreators';
+import ActionCreator from '../../actions/TodoActionCreators';
 
 export default React.createClass({
   getDefaultProps() {

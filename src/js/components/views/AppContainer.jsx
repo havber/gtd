@@ -1,6 +1,6 @@
 import React from 'react';
-import TodoStore from '../stores/TodoStore';
-import ActionCreator from '../actions/TodoActionCreators';
+import TodoStore from '../../stores/TodoStore';
+import ActionCreator from '../../actions/TodoActionCreators';
 import App from './App.jsx';
 
 export default React.createClass({
