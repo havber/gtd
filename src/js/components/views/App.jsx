@@ -18,7 +18,8 @@ export default React.createClass({
     let {onAddTask, onClear, tasks} = this.props;
     return (
       <div className="app-container">
-        <TaskList />
+        <TaskList tasks={tasks} />
+        <button onClick={onAddTask}>Add task</button>
       </div>
     );
   }

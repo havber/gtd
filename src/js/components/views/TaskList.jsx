@@ -4,7 +4,7 @@ import Task from './Task.jsx';
 export default React.createClass({
   getDefaultProps() {
     return {
-      tasks: [{title: 'Task 1'}, {title: 'Task 2'}]
+      tasks: []
     };
   },
 
