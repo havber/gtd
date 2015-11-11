@@ -14,6 +14,9 @@ export default {
   },
 
   completeTask(task) {
-    console.warn('completeTask action not yet implemented...');
+    task.completed = true;
+    Dispatcher.handleViewAction({
+      type: Constants.ActionTypes.TASK_COMPLETED
+    });
   }
 };

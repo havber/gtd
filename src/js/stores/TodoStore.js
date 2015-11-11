@@ -35,6 +35,9 @@ const TodoStore = assign({}, BaseStore, {
           TodoStore.emitChange();
         }
         break;
+      case Constants.ActionTypes.TASK_COMPLETED:
+        TodoStore.emitChange();
+        break;
 
       // add more cases for other actionTypes...
     }
