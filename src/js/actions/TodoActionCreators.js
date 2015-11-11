@@ -18,5 +18,12 @@ export default {
     Dispatcher.handleViewAction({
       type: Constants.ActionTypes.TASK_COMPLETED
     });
+  },
+
+  uncompleteTask(task) {
+    task.completed = false;
+    Dispatcher.handleViewAction({
+      type: Constants.ActionTypes.TASK_UNCOMPLETED
+    });
   }
 };

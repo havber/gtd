@@ -14,6 +14,8 @@ export default React.createClass({
   handleToggle(task) {
     if (this.refs.checkbox.getDOMNode().checked) {
       ActionCreator.completeTask(task);
+    } else {
+      ActionCreator.uncompleteTask(task);
     }
   },
 
