@@ -7,7 +7,7 @@
   "main": "src/main.js",
   "devDependencies": {
     "babelify": "^6.3.0",
-    "browserify": "^11.2.0",
+    "browserify": "*",
     "electron-prebuilt": "^0.33.3",
     "gulp": "^3.8.7",
     "gulp-connect": "^2.2.0",
@@ -46,6 +46,6 @@
     "eslint-plugin-react": "^3.4.2",
     "flux": "^2.1.1",
     "object-assign": "^4.0.1",
-    "react": "^0.13.3"
+    "react": "^0.14.3"
   }
 }
