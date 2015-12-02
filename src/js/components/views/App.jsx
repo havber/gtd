@@ -2,6 +2,7 @@ import ReactDOM from 'react-dom';
 import React, {PropTypes} from 'react';
 import TaskList from './TaskList.jsx';
 import Modal from 'react-modal';
+import modalStyles from '../../../styles/modalStyles';
 
 export default React.createClass({
 
@@ -12,7 +13,17 @@ export default React.createClass({
   },
 
   getInitialState: function() {
-    return {isModalOpen: false};
+    return {isModalOpen: true};
+  },
+
+  componentDidMount() {
+    let body = document.querySelector('body');
+    let self = this;
+    body.addEventListener('keydown', function(e) {
+      if (e.ctrlKey && e.keyCode === 78) {
+        self.onOpenModal();
+      }
+    })
   },
 
   onOpenModal: function() {
@@ -29,25 +40,28 @@ export default React.createClass({
     };
   },
 
+  onInput: function(event) {
+    if (event.keyCode !== 13) {
+      return;
+    }
+    this.props.onAddTask(event);
+    this.onCloseModal();
+  },
+
   render() {
     let {onAddTask, onClear, tasks} = this.props;
-
     return (
       <div className="app-container">
         <TaskList tasks={tasks} />
-        <button onClick={this.onOpenModal}><span>Add task</span>
 
           <Modal
             isOpen={this.state.isModalOpen}
-            onRequestClose={this.onCloseModal} >
-
-            <button onClick={this.onCloseModal}>X</button>
-            <p>Add task:</p>
-            <input type="text"/>
-
+            onRequestClose={this.onCloseModal}
+            style={modalStyles}>
+            <input id="new-task-input" onKeyDown={this.onInput} type="text"/>
           </Modal>
 
-        </button>
+
       </div>
     );
   }

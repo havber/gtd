@@ -1,4 +1,4 @@
-import ReactDOM from 'react-dom'
+import ReactDOM from 'react-dom';
 import React from 'react';
 import AppContainer from './components/views/AppContainer.jsx';
 

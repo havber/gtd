@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import TodoStore from '../../stores/TodoStore';
 import ActionCreator from '../../actions/TodoActionCreators';
 import App from './App.jsx';
@@ -21,7 +22,7 @@ export default React.createClass({
   },
 
   handleAddTask(e) {
-    let title = prompt('Enter task title:');
+    let title = e.target && e.target.value;
     if (title) {
       ActionCreator.addItem(title);
     }
